@@ -22,6 +22,7 @@ jobs:
         run: date
 
   job3:
+    # Wasn't necessary to put a name
     name: 'J-3'
     runs-on: 'macos-latest'
     steps:
