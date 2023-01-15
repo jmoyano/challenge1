@@ -11,14 +11,14 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: 'Do the checkout'
-        uses: 'actions/checkout@v3'
+        uses: actions/checkout@v3
 
 
   artifact:
     runs-on: 'ubuntu-latest'
     steps:
       - name: 'Upload the artifact'
-        uses: 'actions/upload-artifact'
+        uses: actions/upload-artifact
         with:
           name: my-artifact
           path: ./${{ env.HELLO }}
