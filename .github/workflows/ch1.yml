@@ -1,0 +1,36 @@
+---
+name: 'Challenge 1'
+
+on: 
+  push:
+    branches: [main]
+
+
+jobs:
+  job1:
+    name: 'J-1'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'J-1, S-1'
+        run: date
+
+  job2:
+    name: 'J-2'
+    runs-on: 'windows-latest'
+    steps:
+      - name: 'J-2, S-1'
+        run: date /t
+
+  job3:
+    name: 'J-3'
+    runs-on: 'macos-latest'
+    steps:
+      - name: 'J-3, S-1'
+        run: date
+
+  job4:
+    name: 'J-4'
+    runs-on: 'macos-latest'
+    steps:
+      - name: 'J-4, S-1'
+        run: date
