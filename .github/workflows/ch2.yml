@@ -19,11 +19,6 @@ jobs:
     steps:
       - name: 'Create the ${{ env.HELLO }} file'
         run: echo 'Hello artifact' > ${{ env.HELLO }}
-
-  artifact:
-    runs-on: 'ubuntu-latest'
-    needs: [create]
-    steps:
       - name: 'Upload the artifact'
         uses: actions/upload-artifact@v3.1.2
         with:
