@@ -19,7 +19,7 @@ jobs:
     runs-on: 'windows-latest'
     steps:
       - name: 'J-2, S-1'
-        run: date /t
+        run: date
 
   job3:
     name: 'J-3'
@@ -30,7 +30,12 @@ jobs:
 
   job4:
     name: 'J-4'
-    runs-on: 'macos-latest'
+    runs-on: 'macos-11'
+    needs:
+      - 'J-1'
+      - 'J-2'
+      - 'J-3'
+
     steps:
       - name: 'J-4, S-1'
         run: date
